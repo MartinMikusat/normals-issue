@@ -17,7 +17,11 @@
 <T.PerspectiveCamera position={[-10, 25, 0]} makeDefault fov={50}>
 	<OrbitControls enableDamping />
 </T.PerspectiveCamera>
+
+<!-- This one works correctly, left in the scene -->
 <GLTF scale={0.1} url="./printed-voron-stealthburner-body-textured.glb" useDraco />
+
+<!-- This doesn't work right, the normals look flipped. Also, if you could help me figure out the AO map, that would be great -->
 <T.Group scale={0.1} position={[7, 0, 0]} dispose={false}>
 	{#if model}
 		<T.Mesh castShadow receiveShadow>
